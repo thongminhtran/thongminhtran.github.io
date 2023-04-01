@@ -14,13 +14,13 @@ function Header() {
                         <div className="personal-profile__contacts">
                             <dl className="contact-list contact-list__opacity-titles">
                                 <dt>Age:</dt>
-                                <dd>21</dd>
+                                <dd>23</dd>
                                 <dt>Phone:</dt>
                                 <dd><a href="tel:4382277888">438 227 7888</a></dd>
                                 <dt>Email:</dt>
-                                <dd><a href="mailto:thong.tranminh@mail.concordia.ca">thong.tranminh@mail.concordia.ca</a></dd>
+                                <dd><a href="mailto:t_thon@live.concordia.ca">t_thon@live.concordia.ca</a></dd>
                                 <dt>Address:</dt>
-                                <dd>1309 Victoria Avenue, Saint-Lambert, Quebec Canada</dd>
+                                <dd>7760 Ave Naples, Brossard, Quebec, Canada</dd>
                             </dl>
                         </div>
                         <p className="personal-profile__social">

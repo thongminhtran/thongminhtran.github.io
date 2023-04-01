@@ -15,7 +15,7 @@ function Contact() {
                                 <dt>Phone:</dt>
                                 <dd><a href="tel:4382277888">438 227 7888</a></dd>
                                 <dt>Email:</dt>
-                                <dd><a href="mailto:thong.tranminh@mail.concordia.ca ">thong.tranminh@mail.concordia.ca </a></dd>
+                                <dd><a href="mailto:t_thon@live.concordia.ca">t_thon@live.concordia.ca</a></dd>
                             </dl>
                         </div>
                         <div className="contacts__social">
@@ -29,7 +29,7 @@ function Contact() {
                     </div>
                 </div>
                 <div className="footer">
-                    <p>© 2021 Thong Minh Tran. All Rights Reserved</p>
+                    <p>© 2023 Thong Minh Tran. All Rights Reserved</p>
                 </div>
             </div>
         </div>

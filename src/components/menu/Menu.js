@@ -1,4 +1,3 @@
-import './Menu.css';
 import '../../App.css';
 import {Fragment} from "react";
 function Menu() {
