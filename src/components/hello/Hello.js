@@ -14,7 +14,7 @@ function Hello() {
 
                         I also enjoy working in PHP 7 and WordPress 4 and above, to develop professional websites, integrating some WordPress and WooCommerce plugins, together with MySQL, CSS3, HTML5, and Javascript. Sometimes I make some fun with Linux commands.
                     </p>
-                    <a href="https://github.com/thongminhtran/thongminhtran.github.io/blob/master/public/ThongMinhTran-Resume-ComputerScience-ConcordiaUniversity.pdf" className="section_btn site-btn"><img src={icon} alt=""/>Download CV</a>
+                    <a href="https://github.com/thongminhtran/thongminhtran.github.io/blob/master/public/ThongMinhTran-Resume-ComputerScience-ConcordiaUniversity-InternalBoard-1.pdf" target={"_blank"} className="section_btn site-btn"><img src={icon} alt=""/>Download CV</a>
                 </div>
             </div>
         </section>
