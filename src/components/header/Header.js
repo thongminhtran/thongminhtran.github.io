@@ -1,4 +1,4 @@
-import profile from './profile.jfif';
+import profile from './profile_picture.jfif';
 
 function Header() {
     return (
