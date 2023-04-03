@@ -1,5 +1,5 @@
 import profile from './profile_picture.jfif';
-
+import ageCalculating from '../../usefulFunctions';
 function Header() {
     return (
         <header className="main-header">
@@ -14,7 +14,7 @@ function Header() {
                         <div className="personal-profile__contacts">
                             <dl className="contact-list contact-list__opacity-titles">
                                 <dt>Age:</dt>
-                                <dd>23</dd>
+                                <dd>{ageCalculating}</dd>
                                 <dt>Phone:</dt>
                                 <dd><a href="tel:4382277888">438 227 7888</a></dd>
                                 <dt>Email:</dt>

@@ -17,7 +17,7 @@ function Resume() {
             period: "January 2022 - May 2022",
             link: "https://www.cgi.com/canada/en-ca",
             description: "Develop frontend application to help clients (personal/agent/company) manage their bookings for CGI's client who is VIA Rail Canada. " +
-                "who is VIA Rail Canada. The website was deployed on the production in May 2022 at https://www.viarail.ca/en., using Angular 10." +
+                "who is VIA Rail Canada. The website was deployed on the production in May 2022 at https://www.viarail.ca/en., using Angular 10. " +
                 "Develop unit tests with Jest in Angular." + " Contribute by picking up tasks and attending sprint planning, sprint daily standup and sprint demo. " +
                 " Volunteer to tackle difficult bug fixing."
         },

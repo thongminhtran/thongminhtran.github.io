@@ -1,5 +1,6 @@
 import imageBackground from './img_bg_main.jpg';
 function Contact() {
+    const currentYear  = new Date().getFullYear();
     return (
         <div className="background" style={{ backgroundImage: `url(${imageBackground})` }}>
             <div id="contact" className="container section">
@@ -29,7 +30,7 @@ function Contact() {
                     </div>
                 </div>
                 <div className="footer">
-                    <p>© 2023 Thong Minh Tran. All Rights Reserved</p>
+                    <p>© {currentYear} Thong Minh Tran. All Rights Reserved</p>
                 </div>
             </div>
         </div>
