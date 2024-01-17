@@ -41,7 +41,7 @@ function Resume() {
     ];
     const skillItems = [
         {
-            skillName: 'CSS3',
+            skillName: 'HTML5, CSS3',
             percentage: '70'
         },
         {
@@ -49,24 +49,25 @@ function Resume() {
             percentage: '70'
         },
         {
-            skillName: 'Java',
-            percentage: '70'
+            skillName: 'React',
+            percentage: '90'
         },
         {
-            skillName: 'React',
+            skillName: 'Angular',
             percentage: '60'
         },
+        {
+            skillName: 'Java',
+            percentage: '80'
+        },
+
         {
             skillName: 'GIT',
             percentage: '70'
         },
         {
-            skillName: 'Microsoft Word',
+            skillName: 'Microsoft Offices 365',
             percentage: '90'
-        },
-        {
-            skillName: 'Excel',
-            percentage: '70'
         },
         {
             skillName: 'IntelliJ IDE',
@@ -75,6 +76,10 @@ function Resume() {
         {
             skillName: 'Webstorm IDE',
             percentage: '70'
+        },
+        {
+            skillName: 'JIRA',
+            percentage: '90'
         },
         {
             skillName: 'CRM (Bitrix 24)',
@@ -92,7 +97,7 @@ function Resume() {
                     <h2 id="resume_header" className="section__title">Resume_</h2>
                     <p className="section__description">
                         I'm a fourth year student of Computer Science, in Concordia University, Montreal Quebec. I'm a passionate, honest, attention detailed and creative person. I am actively
-                        looking for an internship this Summer 2023. Below is my working experiences in Montreal, Quebec Canada.
+                        looking for a full-time position this Summer 2024. Below is my working experiences in Montreal, Quebec Canada.
                     </p>
                 </div>
             </div>

@@ -9,6 +9,7 @@ import './css/main.css';
 import './css/color.css';
 import './css/monochrome.css';
 import Contact from "./components/contact/Contact";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

@@ -4289,7 +4289,7 @@ tbody.collapse.show {
   line-height: 1rem;
   color: #fff;
   background-color: #007bff;
-  transition: width .6s ease
+  transition: width 2s ease-in-out;
 }
 
 .progress-bar-striped {
@@ -12591,6 +12591,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   height: 6px;
   margin-bottom: 30px
 }
+.progress-list__skill-title {
+  font-weight: bold;
+}
+
 
 .progress-list .progress .progress-bar {
   background-color: #4a4a4a
