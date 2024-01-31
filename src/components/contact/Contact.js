@@ -16,7 +16,7 @@ function Contact() {
                                 <dt>Phone:</dt>
                                 <dd><a href="tel:4382277888">438 227 7888</a></dd>
                                 <dt>Email:</dt>
-                                <dd><a href="mailto:t_thon@live.concordia.ca">t_thon@live.concordia.ca</a></dd>
+                                <dd><a href="mailto:tminhthong1999@gmail.com">tminhthong1999@gmail.com</a></dd>
                             </dl>
                         </div>
                         <div className="contacts__social">

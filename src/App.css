@@ -12089,6 +12089,13 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin-top: 50px;
   transition: all .3s
 }
+.menu__wrapper a {
+  text-decoration: none;
+}
+
+.menu__wrapper a:hover {
+  text-decoration: underline;
+}
 
 .menu .menu__wrapper nav {
   font-size: 14px;
@@ -12265,23 +12272,76 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   padding-bottom: 0
 }
 
+.resume-list .resume-list__block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .resume-list .resume-list__block-title {
   text-transform: uppercase;
-  color: #4a4a4a;
-  font-size: 14px;
-  line-height: 20px;
+  color: #333333; /* Darker for prominence */
+  font-size: 15px; /* Slightly larger for header */
+  line-height: 24px;
   font-family: Roboto Mono, monospace;
   font-weight: 700;
-  padding-bottom: 5px
+  margin-bottom: 4px; /* Reduced bottom margin */
+}
+.resume-list .resume-list__block-title a {
+  font-size: 16px;
+  color: #333333; /* Color matching the title */
+  text-decoration: underline;
+}
+
+.resume-list .resume-list__block-title a:hover {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+.resume-list .resume-list__block-position {
+  font-family: Inconsolata, monospace;
+  font-size: 13px;
+  line-height: 15px;
+  font-style: italic;
+  color: #999999; /* Match with title but not italicized */
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .resume-list .resume-list__block-date {
   font-family: Inconsolata, monospace;
-  font-size: 14px;
+  font-size: 14px !important;
   line-height: 20px;
-  color: #999;
-  padding-bottom: 10px
+  color: #666666 !important;
+  font-weight: 600;
+  margin: 0;
 }
+.resume-list__block-description {
+  margin-top: 15px;
+}
+
+
+.resume-list__block-description ul {
+  list-style: none; /* Removes the default list bullet */
+  padding: 0;
+  margin: 0;
+}
+
+.resume-list__block-description li {
+  margin-bottom: 10px; /* Adds space between list items */
+  padding-left: 20px;
+  position: relative;
+  font-size: 15px; /* Adjust the font size as needed */
+}
+
+.resume-list__block-description li::before {
+  content: '•'; /* Adds a custom bullet */
+  position: absolute;
+  left: 0;
+  color: black; /* Change the bullet color */
+  font-size: 1.8em; /* Adjust the bullet size */
+  top: 0.33em; /* Aligns bullet with the top of the text */
+  transform: translateY(-50%); /* Adjusts the vertical position to better align with the first line */
+}
+
 
 .post-cards {
   margin-bottom: 40px
