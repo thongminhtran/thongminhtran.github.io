@@ -12320,27 +12320,28 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 
 .resume-list__block-description ul {
-  list-style: none; /* Removes the default list bullet */
-  padding: 0;
+  list-style-type: disc;
   margin: 0;
+  padding-left: 10px;
 }
 
 .resume-list__block-description li {
   margin-bottom: 10px; /* Adds space between list items */
-  padding-left: 20px;
+  padding-left: 8px; /* Adjust as needed, considering the inline bullet */
   position: relative;
   font-size: 15px; /* Adjust the font size as needed */
+  /* No need for ::before styles here */
 }
 
-.resume-list__block-description li::before {
-  content: '•'; /* Adds a custom bullet */
-  position: absolute;
-  left: 0;
-  color: black; /* Change the bullet color */
-  font-size: 1.8em; /* Adjust the bullet size */
-  top: 0.33em; /* Aligns bullet with the top of the text */
-  transform: translateY(-50%); /* Adjusts the vertical position to better align with the first line */
-}
+/*.resume-list__block-description li::before {*/
+/*  content: '•'; !* Adds a custom bullet *!*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  color: black; !* Change the bullet color *!*/
+/*  font-size: 1.8em; !* Adjust the bullet size *!*/
+/*  top: 0.5em; !* Aligns bullet with the top of the text *!*/
+/*  transform: translateY(-50%); !* Adjusts the vertical position to better align with the first line *!*/
+/*}*/
 
 
 .post-cards {
