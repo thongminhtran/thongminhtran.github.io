@@ -14,7 +14,7 @@ function Contact() {
                         <div className="contacts__list">
                             <dl className="contact-list">
                                 <dt>Phone:</dt>
-                                <dd><a href="tel:4382277888">438 227 7888</a></dd>
+                                <dd><a href="tel:8255211633">825-521-1633</a></dd>
                                 <dt>Email:</dt>
                                 <dd><a href="mailto:tminhthong1999@gmail.com">tminhthong1999@gmail.com</a></dd>
                             </dl>

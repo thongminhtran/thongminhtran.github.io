@@ -26,7 +26,7 @@ function Resume() {
         {
             company: "C.H. Robinson",
             position: "Data Analyst Intern",
-            period: "May 2021 - present",
+            period: "May 2021 - December 2021",
             link: "https://www.chrobinson.com/en-us/",
             description: "Facilitated communication between support staff, clients, and Canada customs release staff, streamlining the documentation process.\n" +
                 "Collaborated with IT teams and operational staff to gather and document business requirements, leading to workflow improvements.\n" +
