@@ -20,7 +20,7 @@ function Header() {
                                 <dt>Email:</dt>
                                 <dd><a href="mailto:tminhthong1999@gmail.com">tminhthong1999@gmail.com</a></dd>
                                 <dt>Address:</dt>
-                                <dd>7760 Ave Naples, Brossard, Quebec, Canada</dd>
+                                <dd>150 Hawkstone Drive NW, Calgary, Alberta, Canada</dd>
                             </dl>
                         </div>
                         <p className="personal-profile__social">
