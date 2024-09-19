@@ -1,20 +1,25 @@
 import icon from './img_btn_icon.png';
+
 function Hello() {
     return (
         <section id="hello" className="container section">
             <div className="row">
                 <div className="col-md-10">
-                    <h2 id="hello_header" className="section__title">Hi, this website is developed by React (Javascript)_</h2>
+                    <h2 id="hello_header" className="section__title">Hi, this website is developed by React
+                        (Javascript)_</h2>
                     <p className="section__description">
-                        I am a fourth-year student in CS from Concordia University (Montreal, Quebec Canada)
-                        with an interest in the foundation of programming and algorithm.
-
-                        I have experience in Java 8 and 11, Javascript with React. I also know a bit of Angular (10) with Typescript. As you can see, this portfolio is developed by using React (Javascript) and thanks to Github pages, I can host it for free.
-                        <br/>
-
-                        I also enjoy working in PHP 7 and WordPress 4 and above, to develop professional websites, integrating some WordPress and WooCommerce plugins, together with MySQL, CSS3, HTML5, and Javascript. Sometimes I make some fun with Linux commands.
+                        I am a recent Computer Science graduate from Concordia University with expertise in JavaScript
+                        (ES6+), React, Material-UI (MUI), and TypeScript for building front-end applications.
+                        I also have experience with Angular and Python, so I can handle both front-end and
+                        back-end development. This portfolio is built with React and hosted on GitHub Pages for free.
+                        <br/> <br/>
+                        On the back-end, I work with Node.js and Express.js to create scalable applications and RESTful
+                        APIs, using HTTP methods like GET, POST, PUT, and DELETE. I have knowledge with both SQL
+                        (PostgreSQL,
+                        MySQL) and NoSQL (MongoDB) databases.
                     </p>
-                    <a href="/Tim_Tran_Frontend_Developer_Resume.pdf" download className="section_btn site-btn"><img src={icon} alt=""/>Download CV</a>
+                    <a href="/Tim_Tran_Frontend_Developer_Resume.pdf" download className="section_btn site-btn"><img
+                        src={icon} alt=""/>Download CV</a>
                 </div>
             </div>
         </section>
