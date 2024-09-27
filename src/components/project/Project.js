@@ -1,6 +1,7 @@
 import project1 from './project1.PNG';
 import project2 from './project2.PNG';
 import project3 from './project3.PNG';
+import project4 from './project4.PNG'
 import ProjectItem from "./ProjectItem";
 function Project() {
     const projects = [
@@ -45,6 +46,21 @@ function Project() {
                 'communication'
             ],
             link: 'https://huongxua-anjou.com/fr_ca/'
+        },
+        {
+            image: project4,
+            title: 'React Typing Practice - Typing speed and accuracy improvement tool',
+            description: 'This project is a typing practice application built using React and TypeScript. It allows users to practice typing with different categories like words, sentences, numbers, and tech terms, with real-time feedback on WPM and accuracy. The app also includes a customizable theme switcher for light and dark modes.',
+            stacks: [
+                'typescript',
+                'reactjs',
+                'redux',
+                'scss',
+                'html',
+                'github-pages',
+                'responsive-design'
+            ],
+            link: 'https://thongminhtran.github.io/react-typing-practice/'
         }
     ];
     return (
@@ -55,8 +71,9 @@ function Project() {
                 </div>
             </div>
             <div className="portfolio-cards">
-                {projects.map(function(project, index){
-                    return <ProjectItem title={project.title} image={project.image} description={project.description} link={project.link}/>
+                {projects.map(function (project, index) {
+                    return <ProjectItem title={project.title} image={project.image} description={project.description}
+                                        link={project.link} stacks={project.stacks}/>
                 })}
             </div>
         </section>

@@ -1,4 +1,4 @@
-function ProjectItem({image, title, description, link}) {
+function ProjectItem({image, title, description, link, stacks}) {
     return (
         <div className="row project-card">
             <div className="col-md-6 col-lg-5 project-card__img">
@@ -11,15 +11,14 @@ function ProjectItem({image, title, description, link}) {
                 </p>
                 <p className="project-card__stack">Used stack:</p>
                 <ul className="tags">
-                    <li>html5</li>
-                    <li>css3</li>
-                    <li>JavaScript</li>
-                    <li>bower</li>
-                    <li>grunt</li>
+                    {stacks.map((stack, index) => (
+                        <li key={index}>{stack}</li>
+                    ))}
                 </ul>
                 <a href={link} className="project-card__link">{link}</a>
             </div>
         </div>
     );
 }
+
 export default ProjectItem;
