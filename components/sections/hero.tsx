@@ -21,7 +21,8 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-primary/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 -right-40 -z-10 h-[30rem] w-[30rem] rounded-full bg-fuchsia-500/10 blur-3xl" />
 
-      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 sm:px-8 md:grid-cols-[minmax(0,1fr)_auto] md:gap-14">
+        <div className="order-2 md:order-1">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -118,6 +119,29 @@ export function Hero() {
             <Mail className="h-4 w-4" />
             {profile.email}
           </a>
+        </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="relative order-1 mx-auto w-full max-w-[260px] md:order-2 md:max-w-[300px] lg:max-w-[340px]"
+        >
+          <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/30 via-fuchsia-500/15 to-cyan-400/20 blur-2xl" />
+          <div className="relative overflow-hidden rounded-3xl border border-border/80 bg-card shadow-2xl ring-1 ring-black/5 dark:ring-white/5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={profile.avatarUrl}
+              alt={`Photo of ${profile.name}`}
+              width={800}
+              height={800}
+              className="aspect-square h-full w-full object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-border/80 bg-background/90 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground backdrop-blur">
+            Calgary · YYC
+          </div>
         </motion.div>
       </div>
     </section>

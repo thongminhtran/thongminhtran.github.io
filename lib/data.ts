@@ -8,6 +8,7 @@ export const profile = {
   email: "tminhthong1999@gmail.com",
   phone: "+1 825 521 1633",
   resumeUrl: "/Tim_Tran_Resume.pdf",
+  avatarUrl: "/tim.jpg",
   socials: {
     github: "https://github.com/thongminhtran",
     linkedin: "https://linkedin.com/in/thongminhtran/",

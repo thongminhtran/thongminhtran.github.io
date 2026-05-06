@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { profile } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -39,9 +40,14 @@ export function Nav() {
           href="#top"
           className="group flex items-center gap-2 font-mono text-sm font-medium"
         >
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/30">
-            TT
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={profile.avatarUrl}
+            alt={profile.name}
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-full object-cover ring-1 ring-border transition group-hover:ring-primary/60"
+          />
           <span className="hidden sm:inline-flex items-center gap-1">
             <span className="text-muted-foreground">~/</span>
             <span>tim-tran</span>
