@@ -1,6 +1,6 @@
 export const profile = {
   name: "Tim Tran",
-  fullName: "Thong Minh Tran",
+  fullName: "Minh Thong Tran",
   title: "Full-Stack Developer",
   tagline:
     "Building production-grade mobile and web apps with React Native, Next.js, and .NET.",
@@ -210,6 +210,10 @@ export type Project = {
   image?: string;
   imageAlt?: string;
   imagePosition?: "center" | "top" | "bottom" | "contain";
+  /** "logo": logo on branded gradient. "photo": full-bleed photo. */
+  presentation?: "logo" | "photo";
+  /** CSS background for the logo panel (used when presentation === "logo"). */
+  panelBackground?: string;
   accent: "primary" | "violet" | "cyan" | "amber" | "rose";
 };
 
@@ -224,9 +228,11 @@ export const projects: Project[] = [
       "Multi-environment EAS Build + Sentry + Expo OTA",
     ],
     stack: ["React Native", "Expo", "TypeScript", "Firebase", "Zustand"],
-    image: "/projects/vug-screen.jpg",
-    imageAlt: "VUG Social app screenshot",
-    imagePosition: "top",
+    image: "/projects/vug-logo.png",
+    imageAlt: "VUG Social brand logo",
+    presentation: "logo",
+    panelBackground:
+      "linear-gradient(135deg, #fde7f3 0%, #ffe6d4 45%, #d8efff 100%)",
     links: [
       {
         label: "App Store",
@@ -253,9 +259,11 @@ export const projects: Project[] = [
       "Azure DevOps CI/CD, EAS Build/Submit, IIS deployment",
     ],
     stack: ["React Native", "Next.js", ".NET 8", "SQL Server", "Hangfire"],
-    image: "/projects/goodcatch-screen.jpg",
-    imageAlt: "Good Catch Pro app screenshot",
-    imagePosition: "top",
+    image: "/projects/goodcatch-logo.png",
+    imageAlt: "Good Catch Pro brand logo",
+    presentation: "logo",
+    panelBackground:
+      "linear-gradient(135deg, #fff5e0 0%, #ffe2c2 50%, #ffd1a8 100%)",
     links: [
       {
         label: "App Store",
@@ -294,6 +302,7 @@ export const projects: Project[] = [
     image: "/projects/bombardier-prognostics.png",
     imageAlt: "Prognostics survival curve from the Bombardier myMaintenance app",
     imagePosition: "center",
+    presentation: "photo",
     links: [
       {
         label: "myMaintenance product page",
@@ -319,6 +328,7 @@ export const projects: Project[] = [
     image: "/projects/viarail.jpg",
     imageAlt: "VIA Rail Canada train",
     imagePosition: "center",
+    presentation: "photo",
     links: [
       {
         label: "viarail.ca",

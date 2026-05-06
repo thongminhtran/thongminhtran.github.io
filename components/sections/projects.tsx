@@ -45,9 +45,25 @@ export function Projects() {
               transition={{ duration: 0.5, delay: i * 0.06 }}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/80 bg-card transition hover:border-primary/40"
             >
-              <div className="relative h-56 overflow-hidden bg-secondary">
-                {p.image ? (
-                  // Static export: next/image is unoptimized, plain img is fine.
+              <div
+                className="relative h-56 overflow-hidden bg-secondary"
+                style={
+                  p.presentation === "logo" && p.panelBackground
+                    ? { background: p.panelBackground }
+                    : undefined
+                }
+              >
+                {p.image && p.presentation === "logo" ? (
+                  <div className="absolute inset-0 grid place-items-center p-8">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={p.image}
+                      alt={p.imageAlt ?? p.title}
+                      loading="lazy"
+                      className="max-h-[75%] max-w-[70%] object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                  </div>
+                ) : p.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={p.image}
@@ -63,17 +79,22 @@ export function Projects() {
                     )}
                   />
                 ) : null}
-                <div
-                  className={cn(
-                    "pointer-events-none absolute inset-0 bg-gradient-to-t",
-                    accentMap[p.accent],
-                  )}
-                />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-card/95 via-card/40 to-transparent" />
 
-                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-2.5 py-1 backdrop-blur">
+                {p.presentation !== "logo" && (
+                  <>
+                    <div
+                      className={cn(
+                        "pointer-events-none absolute inset-0 bg-gradient-to-t",
+                        accentMap[p.accent],
+                      )}
+                    />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-card/95 via-card/40 to-transparent" />
+                  </>
+                )}
+
+                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/80 px-2.5 py-1 backdrop-blur">
                   <span className={cn("h-1.5 w-1.5 rounded-full", dotMap[p.accent])} />
-                  <span className="font-mono text-[10px] uppercase tracking-widest text-foreground/80">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-black/70">
                     Project · {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
@@ -84,7 +105,7 @@ export function Projects() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Open ${p.title} (${p.links[0].label})`}
-                    className="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full border border-border/60 bg-background/70 backdrop-blur transition group-hover:bg-primary group-hover:text-primary-foreground"
+                    className="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/80 text-black/80 backdrop-blur transition group-hover:bg-primary group-hover:text-primary-foreground"
                   >
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
