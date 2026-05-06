@@ -39,28 +39,29 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.99 0 0);
-  --foreground: oklch(0.18 0.01 260);
+  /* Soft warm off-white — feels premium, not clinical */
+  --background: oklch(0.985 0.004 85);
+  --foreground: oklch(0.20 0.025 265);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 260);
+  --card-foreground: oklch(0.20 0.025 265);
 
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 260);
+  --popover-foreground: oklch(0.20 0.025 265);
 
   --primary: oklch(0.55 0.22 265);
   --primary-foreground: oklch(0.99 0 0);
 
-  --secondary: oklch(0.96 0.01 260);
-  --secondary-foreground: oklch(0.18 0.01 260);
+  --secondary: oklch(0.955 0.012 250);
+  --secondary-foreground: oklch(0.20 0.025 265);
 
   --muted: oklch(0.96 0.01 260);
-  --muted-foreground: oklch(0.5 0.02 260);
+  --muted-foreground: oklch(0.48 0.025 260);
 
-  --accent: oklch(0.96 0.01 260);
-  --accent-foreground: oklch(0.18 0.01 260);
+  --accent: oklch(0.95 0.018 260);
+  --accent-foreground: oklch(0.20 0.025 265);
 
-  --border: oklch(0.92 0.01 260);
+  --border: oklch(0.90 0.012 260);
   --ring: oklch(0.55 0.22 265);
 }
 
