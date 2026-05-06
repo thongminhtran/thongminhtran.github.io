@@ -54,16 +54,18 @@ export function Projects() {
                 }
               >
                 {p.image && p.presentation === "logo" ? (
-                  // Asymmetric padding: more on top so the logo's optical center
-                  // sits above the geometric center, balancing the top-left badge
-                  // and top-right link button.
-                  <div className="absolute inset-0 grid place-items-center pt-12 pb-6 px-8">
+                  // Cap height in pixels — `max-h-full` resolves against the
+                  // parent's full height (224px), not the padded inner area,
+                  // so percentages let the logo overflow the centering box.
+                  // Asymmetric padding (more on bottom) shifts optical center
+                  // up to balance the top badge and link button.
+                  <div className="absolute inset-0 flex items-center justify-center pt-8 pb-14 px-8">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.image}
                       alt={p.imageAlt ?? p.title}
                       loading="lazy"
-                      className="max-h-full max-w-[78%] object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="max-h-32 max-w-[60%] object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
                 ) : p.image ? (
