@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { GraduationCap, MapPin, Sparkles } from "lucide-react";
+import { ExternalLink, GraduationCap, MapPin, Sparkles } from "lucide-react";
 import { SectionHeading } from "../section-heading";
 import { educations } from "@/lib/data";
 
@@ -28,7 +28,19 @@ export function Education() {
                 <h3 className="text-lg font-semibold leading-snug">
                   {e.degree}
                 </h3>
-                <p className="mt-0.5 text-sm text-primary">{e.school}</p>
+                {e.url ? (
+                  <a
+                    href={e.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group/link mt-0.5 inline-flex items-center gap-1 text-sm text-primary transition hover:underline"
+                  >
+                    {e.school}
+                    <ExternalLink className="h-3 w-3 opacity-60 transition-opacity group-hover/link:opacity-100" />
+                  </a>
+                ) : (
+                  <p className="mt-0.5 text-sm text-primary">{e.school}</p>
+                )}
                 <p className="mt-2 inline-flex items-center gap-1 text-xs text-muted-foreground">
                   <MapPin className="h-3 w-3" />
                   {e.location}

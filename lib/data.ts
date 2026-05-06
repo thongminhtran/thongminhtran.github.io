@@ -349,6 +349,7 @@ export type Education = {
   location: string;
   year: string;
   note?: string;
+  url?: string;
 };
 
 export const educations: Education[] = [
@@ -359,10 +360,11 @@ export const educations: Education[] = [
     year: "2024",
   },
   {
-    degree: "High School Diploma — Specialized Program",
-    school: "Lê Hồng Phong High School for the Gifted",
+    degree: "High School Diploma — Specialized Mathematics",
+    school: "High School for the Gifted, VNU-HCM (PTNK)",
     location: "Ho Chi Minh City, Vietnam",
     year: "2017",
-    note: "Top-ranked specialized high school in HCMC.",
+    note: "Top-ranked gifted high school in HCMC, affiliated with Vietnam National University.",
+    url: "https://ptnk.edu.vn/",
   },
 ];
