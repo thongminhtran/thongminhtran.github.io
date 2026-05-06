@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { profile, educations } from "@/lib/data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -65,6 +66,35 @@ export const viewport: Viewport = {
   ],
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  alternateName: [profile.fullName, "Thong Minh Tran"],
+  givenName: "Minh Thong",
+  familyName: "Tran",
+  jobTitle: profile.title,
+  description: profile.summary,
+  url: profile.socials.website,
+  email: `mailto:${profile.email}`,
+  telephone: profile.phone,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Calgary",
+    addressRegion: "AB",
+    addressCountry: "CA",
+  },
+  sameAs: [profile.socials.github, profile.socials.linkedin],
+  alumniOf: educations.map((e) => ({
+    "@type":
+      e.school === "Concordia University"
+        ? "CollegeOrUniversity"
+        : "HighSchool",
+    name: e.school,
+    url: e.url,
+  })),
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -73,6 +103,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
