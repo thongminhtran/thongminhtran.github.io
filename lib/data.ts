@@ -343,9 +343,26 @@ export const projects: Project[] = [
   },
 ];
 
-export const education = {
-  degree: "Bachelor of Computer Science — General Program (Co-op)",
-  school: "Concordia University",
-  location: "Montreal, QC",
-  year: "2024",
+export type Education = {
+  degree: string;
+  school: string;
+  location: string;
+  year: string;
+  note?: string;
 };
+
+export const educations: Education[] = [
+  {
+    degree: "Bachelor of Computer Science — General Program (Co-op)",
+    school: "Concordia University",
+    location: "Montreal, QC, Canada",
+    year: "2024",
+  },
+  {
+    degree: "High School Diploma — Specialized Program",
+    school: "Lê Hồng Phong High School for the Gifted",
+    location: "Ho Chi Minh City, Vietnam",
+    year: "2017",
+    note: "Top-ranked specialized high school in HCMC.",
+  },
+];
