@@ -1,0 +1,263 @@
+export const profile = {
+  name: "Tim Tran",
+  fullName: "Thong Minh Tran",
+  title: "Full-Stack Developer",
+  tagline:
+    "Building production-grade mobile and web apps with React Native, Next.js, and .NET.",
+  location: "Calgary, Alberta, Canada",
+  email: "tminhthong1999@gmail.com",
+  phone: "+1 825 521 1633",
+  resumeUrl: "/Tim_Tran_Resume.pdf",
+  socials: {
+    github: "https://github.com/thongminhtran",
+    linkedin: "https://linkedin.com/in/thongminhtran/",
+    website: "https://thongminhtran.github.io",
+  },
+  summary:
+    "Full-stack developer with production experience across React Native mobile, ReactJS / Next.js web, and .NET / Node.js backends. I ship cross-platform apps to the App Store and Google Play, architect Firebase Cloud Functions at scale, and turn Figma prototypes into accessible, high-performance interfaces.",
+};
+
+export type Experience = {
+  company: string;
+  role: string;
+  location: string;
+  period: string;
+  current?: boolean;
+  highlights: string[];
+  stack: string[];
+};
+
+export const experiences: Experience[] = [
+  {
+    company: "Tekarra Project Services",
+    role: "Software Developer",
+    location: "Calgary, AB",
+    period: "Jan 2024 — Present",
+    current: true,
+    highlights: [
+      "Built and shipped a cross-platform social gifting app with React Native, TypeScript, and Expo SDK — published to the App Store and Google Play.",
+      "Architected 120+ Firebase Cloud Functions (Node.js 20, TypeScript) handling auth, payments, notifications, and real-time sync across Firestore, Storage, and Firebase Auth.",
+      "Integrated Elavon payment processing with tokenization and gift card fulfillment, plus real-time chat and activity feeds via GetStream.io.",
+      "Designed a scalable frontend with Zustand, multi-stack React Navigation, and 10+ context providers for real-time data flow.",
+      "Configured EAS Build with multi-environment profiles, Sentry error monitoring, and Expo OTA updates for rapid production releases.",
+    ],
+    stack: [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "Firebase",
+      "Node.js",
+      "Zustand",
+      "Sentry",
+      "GetStream.io",
+    ],
+  },
+  {
+    company: "Allied Solutions Global",
+    role: "Full-Stack Developer (Part-time, Remote)",
+    location: "Singapore (Remote)",
+    period: "Nov 2025 — Feb 2026",
+    highlights: [
+      "Developed Good Catch Pro, a cross-platform safety reporting app using React Native (Expo), Redux, and a .NET 8 backend with EF Core and SQL Server — published to the App Store and Google Play.",
+      "Implemented end-to-end push notifications (Expo Push API + Hangfire background jobs) and built an admin dashboard with Next.js, Material UI, and Tailwind CSS.",
+      "Built custom UI components and batch execution screens for a Manufacturing Execution System (MES) using ASP.NET Web Forms, jQuery, Bootstrap 5, and TrakSYS / ETS in a GMP environment.",
+      "Managed CI/CD and deployments via Azure DevOps, EAS Build/Submit, and IIS.",
+    ],
+    stack: [
+      "React Native",
+      "Next.js",
+      ".NET 8",
+      "C#",
+      "EF Core",
+      "SQL Server",
+      "Hangfire",
+      "Azure DevOps",
+    ],
+  },
+  {
+    company: "Bombardier Aerospace",
+    role: "Frontend Developer (Co-op)",
+    location: "Montreal, QC",
+    period: "Jan 2023 — Dec 2023",
+    highlights: [
+      "Delivered aircraft data visualization dashboards using React (v16 → 18), JavaScript, Material UI, and Mapbox API.",
+      "Integrated Node.js REST APIs and optimized data handling, cutting page load times by 15%; managed client state with Redux.",
+      "Authored 100+ unit tests (React Testing Library + Jest) and Playwright e2e suites, reaching 95% coverage and reducing manual QA effort.",
+      "Partnered with UX to convert Figma prototypes into accessible, responsive web features.",
+    ],
+    stack: [
+      "React",
+      "Material UI",
+      "Mapbox",
+      "Node.js",
+      "Redux",
+      "Jest",
+      "Playwright",
+      "Figma",
+    ],
+  },
+  {
+    company: "CGI Canada",
+    role: "Frontend Developer (Co-op)",
+    location: "Montreal, QC",
+    period: "Jan 2022 — May 2022",
+    highlights: [
+      "Optimized VIA Rail Canada's booking front-end in Angular 10 (TypeScript), reducing load times by 15%.",
+      "Designed and deployed an internal HR system with Java 17 (Spring Boot 2.3), improving operational efficiency by 20%.",
+      "Containerized services with Docker for consistent builds and deployments.",
+    ],
+    stack: ["Angular", "TypeScript", "Java", "Spring Boot", "Docker"],
+  },
+  {
+    company: "Vanntechs Web Studio",
+    role: "WordPress Developer (Part-time)",
+    location: "Montreal, QC",
+    period: "May 2020 — Apr 2021",
+    highlights: [
+      "Delivered multiple client sites using WordPress and WooCommerce (e.g. darchisystems.com, huongxuaanjou.com).",
+      "Coordinated with international teams (India, Philippines, Dominican Republic) and managed timelines across concurrent projects.",
+    ],
+    stack: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
+  },
+];
+
+export type SkillGroup = {
+  category: string;
+  skills: string[];
+};
+
+export const skillGroups: SkillGroup[] = [
+  {
+    category: "Languages",
+    skills: ["TypeScript", "JavaScript (ES6+)", "C#", "Python", "SQL"],
+  },
+  {
+    category: "Mobile & Web Frontend",
+    skills: [
+      "React Native (Expo)",
+      "React",
+      "Next.js",
+      "Redux",
+      "Zustand",
+      "React Navigation",
+      "Tailwind CSS",
+      "Material UI",
+      "Bootstrap 5",
+      "Angular",
+    ],
+  },
+  {
+    category: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      ".NET 8 / ASP.NET Core",
+      "Entity Framework Core",
+      "Hangfire",
+      "Firebase Cloud Functions",
+      "REST APIs",
+      "PostgreSQL",
+      "SQL Server",
+      "MongoDB",
+      "Firestore",
+    ],
+  },
+  {
+    category: "Testing",
+    skills: [
+      "Jest",
+      "React Testing Library",
+      "React Native Testing Library",
+      "Playwright (E2E)",
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    skills: [
+      "Firebase (Auth, Firestore, Functions, Storage)",
+      "Azure DevOps",
+      "EAS (Expo)",
+      "IIS",
+      "Sentry",
+      "Docker",
+      "CI/CD",
+    ],
+  },
+  {
+    category: "Tools",
+    skills: [
+      "Git (GitHub, Bitbucket, Azure Repos)",
+      "ESLint / Prettier",
+      "JIRA",
+      "Agile / Scrum",
+      "Figma",
+    ],
+  },
+];
+
+export type Project = {
+  title: string;
+  description: string;
+  highlights: string[];
+  stack: string[];
+  links?: { label: string; href: string }[];
+  accent: "primary" | "violet" | "cyan" | "amber" | "rose";
+};
+
+export const projects: Project[] = [
+  {
+    title: "Social Gifting App — Tekarra",
+    description:
+      "Cross-platform social gifting platform shipped to the App Store and Google Play. 120+ Firebase Cloud Functions powering auth, payments, notifications, and real-time sync.",
+    highlights: [
+      "Elavon payments with tokenization & gift card fulfillment",
+      "Real-time chat and activity feeds via GetStream.io",
+      "Multi-environment EAS Build + Sentry + Expo OTA",
+    ],
+    stack: ["React Native", "Expo", "TypeScript", "Firebase", "Zustand"],
+    accent: "primary",
+  },
+  {
+    title: "Good Catch Pro — Allied Solutions Global",
+    description:
+      "Cross-platform safety reporting app and admin dashboard. React Native frontend with a .NET 8 + EF Core + SQL Server backend, plus Hangfire-driven push notifications.",
+    highlights: [
+      "End-to-end push notifications via Expo Push API + Hangfire",
+      "Admin dashboard with Next.js, Material UI, Tailwind CSS",
+      "Azure DevOps CI/CD, EAS Build/Submit, IIS deployment",
+    ],
+    stack: ["React Native", "Next.js", ".NET 8", "SQL Server", "Hangfire"],
+    accent: "violet",
+  },
+  {
+    title: "Aircraft Data Dashboards — Bombardier",
+    description:
+      "Aircraft data visualization dashboards used across the engineering organization. Cut page load times by 15% and reached 95% test coverage.",
+    highlights: [
+      "React 18 + Material UI + Mapbox geospatial views",
+      "Node.js REST integration with Redux client state",
+      "100+ unit tests + Playwright E2E suite",
+    ],
+    stack: ["React", "Material UI", "Mapbox", "Redux", "Playwright", "Jest"],
+    accent: "cyan",
+  },
+  {
+    title: "VIA Rail Booking Optimization — CGI",
+    description:
+      "Performance and UX improvements to VIA Rail Canada's booking front-end. Reduced load times by 15% on a high-traffic Angular application.",
+    highlights: [
+      "Angular 10 (TypeScript) booking flow optimization",
+      "Internal HR system in Java 17 / Spring Boot 2.3",
+      "Dockerized builds for consistent deployments",
+    ],
+    stack: ["Angular", "TypeScript", "Java", "Spring Boot", "Docker"],
+    accent: "amber",
+  },
+];
+
+export const education = {
+  degree: "Bachelor of Computer Science — General Program (Co-op)",
+  school: "Concordia University",
+  location: "Montreal, QC",
+  year: "2024",
+};
