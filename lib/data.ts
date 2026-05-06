@@ -19,6 +19,7 @@ export const profile = {
 
 export type Experience = {
   company: string;
+  companyUrl?: string;
   role: string;
   location: string;
   period: string;
@@ -30,6 +31,7 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     company: "Tekarra Project Services",
+    companyUrl: "https://tekarraprojects.com",
     role: "Software Developer",
     location: "Calgary, AB",
     period: "Jan 2024 — Present",
@@ -54,6 +56,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Allied Solutions Global",
+    companyUrl: "https://alliedsolutionsglobal.com",
     role: "Full-Stack Developer (Part-time, Remote)",
     location: "Singapore (Remote)",
     period: "Nov 2025 — Feb 2026",
@@ -76,6 +79,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Bombardier Aerospace",
+    companyUrl: "https://bombardier.com",
     role: "Frontend Developer (Co-op)",
     location: "Montreal, QC",
     period: "Jan 2023 — Dec 2023",
@@ -98,6 +102,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "CGI Canada",
+    companyUrl: "https://www.cgi.com",
     role: "Frontend Developer (Co-op)",
     location: "Montreal, QC",
     period: "Jan 2022 — May 2022",
@@ -110,6 +115,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Vanntechs Web Studio",
+    companyUrl: "https://vanntechs.com",
     role: "WordPress Developer (Part-time)",
     location: "Montreal, QC",
     period: "May 2020 — Apr 2021",
@@ -201,20 +207,40 @@ export type Project = {
   highlights: string[];
   stack: string[];
   links?: { label: string; href: string }[];
+  image?: string;
+  imageAlt?: string;
+  imagePosition?: "center" | "top" | "bottom" | "contain";
   accent: "primary" | "violet" | "cyan" | "amber" | "rose";
 };
 
 export const projects: Project[] = [
   {
-    title: "Social Gifting App — Tekarra",
+    title: "VUG Social — Social Gifting App",
     description:
-      "Cross-platform social gifting platform shipped to the App Store and Google Play. 120+ Firebase Cloud Functions powering auth, payments, notifications, and real-time sync.",
+      "Cross-platform social gifting platform built for GiveVUGS Corp. Shipped to the App Store and Google Play, powered by 120+ Firebase Cloud Functions for auth, payments, notifications, and real-time sync.",
     highlights: [
       "Elavon payments with tokenization & gift card fulfillment",
       "Real-time chat and activity feeds via GetStream.io",
       "Multi-environment EAS Build + Sentry + Expo OTA",
     ],
     stack: ["React Native", "Expo", "TypeScript", "Firebase", "Zustand"],
+    image: "/projects/vug-screen.jpg",
+    imageAlt: "VUG Social app screenshot",
+    imagePosition: "top",
+    links: [
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/ca/app/vug-social/id1566899770",
+      },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.givevugs.vug2025",
+      },
+      {
+        label: "givevugs.com",
+        href: "https://givevugs.com",
+      },
+    ],
     accent: "primary",
   },
   {
@@ -227,6 +253,23 @@ export const projects: Project[] = [
       "Azure DevOps CI/CD, EAS Build/Submit, IIS deployment",
     ],
     stack: ["React Native", "Next.js", ".NET 8", "SQL Server", "Hangfire"],
+    image: "/projects/goodcatch-screen.jpg",
+    imageAlt: "Good Catch Pro app screenshot",
+    imagePosition: "top",
+    links: [
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/good-catch-pro/id1467733489",
+      },
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.alliedsolutions.goodcatchpro",
+      },
+      {
+        label: "alliedsolutionsglobal.com",
+        href: "https://alliedsolutionsglobal.com",
+      },
+    ],
     accent: "violet",
   },
   {
@@ -239,6 +282,15 @@ export const projects: Project[] = [
       "100+ unit tests + Playwright E2E suite",
     ],
     stack: ["React", "Material UI", "Mapbox", "Redux", "Playwright", "Jest"],
+    image: "/projects/bombardier.jpg",
+    imageAlt: "Bombardier Global 7500 — aircraft platform the data tooling supports",
+    imagePosition: "center",
+    links: [
+      {
+        label: "bombardier.com",
+        href: "https://bombardier.com",
+      },
+    ],
     accent: "cyan",
   },
   {
@@ -251,6 +303,19 @@ export const projects: Project[] = [
       "Dockerized builds for consistent deployments",
     ],
     stack: ["Angular", "TypeScript", "Java", "Spring Boot", "Docker"],
+    image: "/projects/viarail.jpg",
+    imageAlt: "VIA Rail Canada train",
+    imagePosition: "center",
+    links: [
+      {
+        label: "viarail.ca",
+        href: "https://www.viarail.ca/en",
+      },
+      {
+        label: "cgi.com",
+        href: "https://www.cgi.com",
+      },
+    ],
     accent: "amber",
   },
 ];

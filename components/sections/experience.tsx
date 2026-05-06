@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Briefcase, MapPin } from "lucide-react";
+import { Briefcase, ExternalLink, MapPin } from "lucide-react";
 import { SectionHeading } from "../section-heading";
 import { experiences } from "@/lib/data";
 
@@ -42,7 +42,19 @@ export function Experience() {
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
                     <h3 className="text-lg font-semibold">{exp.role}</h3>
-                    <p className="text-sm text-primary">{exp.company}</p>
+                    {exp.companyUrl ? (
+                      <a
+                        href={exp.companyUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group/link inline-flex items-center gap-1 text-sm text-primary transition hover:underline"
+                      >
+                        {exp.company}
+                        <ExternalLink className="h-3 w-3 opacity-60 transition-opacity group-hover/link:opacity-100" />
+                      </a>
+                    ) : (
+                      <p className="text-sm text-primary">{exp.company}</p>
+                    )}
                   </div>
                   <div className="flex flex-col items-end text-xs text-muted-foreground sm:flex-row sm:items-center sm:gap-3">
                     <span className="font-mono">{exp.period}</span>

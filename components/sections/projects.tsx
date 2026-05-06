@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { SectionHeading } from "../section-heading";
 import { projects, type Project } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const accentMap: Record<Project["accent"], string> = {
-  primary: "from-indigo-500/30 to-violet-500/10",
-  violet: "from-violet-500/30 to-fuchsia-500/10",
-  cyan: "from-cyan-500/30 to-sky-500/10",
-  amber: "from-amber-500/30 to-orange-500/10",
-  rose: "from-rose-500/30 to-pink-500/10",
+  primary: "from-indigo-500/40 via-violet-500/20 to-transparent",
+  violet: "from-violet-500/40 via-fuchsia-500/20 to-transparent",
+  cyan: "from-cyan-500/40 via-sky-500/20 to-transparent",
+  amber: "from-amber-500/40 via-orange-500/20 to-transparent",
+  rose: "from-rose-500/40 via-pink-500/20 to-transparent",
 };
 
 const dotMap: Record<Project["accent"], string> = {
@@ -45,26 +45,50 @@ export function Projects() {
               transition={{ duration: 0.5, delay: i * 0.06 }}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/80 bg-card transition hover:border-primary/40"
             >
-              <div
-                className={cn(
-                  "relative h-44 overflow-hidden bg-gradient-to-br",
-                  accentMap[p.accent],
+              <div className="relative h-56 overflow-hidden bg-secondary">
+                {p.image ? (
+                  // Static export: next/image is unoptimized, plain img is fine.
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt ?? p.title}
+                    loading="lazy"
+                    className={cn(
+                      "h-full w-full transition-transform duration-700 group-hover:scale-105",
+                      p.imagePosition === "contain"
+                        ? "object-contain"
+                        : "object-cover",
+                      p.imagePosition === "top" && "object-top",
+                      p.imagePosition === "bottom" && "object-bottom",
+                    )}
+                  />
+                ) : null}
+                <div
+                  className={cn(
+                    "pointer-events-none absolute inset-0 bg-gradient-to-t",
+                    accentMap[p.accent],
+                  )}
+                />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-card/95 via-card/40 to-transparent" />
+
+                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-2.5 py-1 backdrop-blur">
+                  <span className={cn("h-1.5 w-1.5 rounded-full", dotMap[p.accent])} />
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-foreground/80">
+                    Project · {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+                {p.links?.[0] && (
+                  <a
+                    href={p.links[0].href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${p.title} (${p.links[0].label})`}
+                    className="absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full border border-border/60 bg-background/70 backdrop-blur transition group-hover:bg-primary group-hover:text-primary-foreground"
+                  >
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
                 )}
-              >
-                <div className="absolute inset-0 grid-pattern opacity-50" />
-                <div className="absolute inset-0 flex items-end p-5">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={cn("h-2 w-2 rounded-full", dotMap[p.accent])}
-                    />
-                    <span className="font-mono text-xs uppercase tracking-widest text-foreground/70">
-                      Project · {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                </div>
-                <div className="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full border border-border/80 bg-background/60 backdrop-blur transition group-hover:bg-primary group-hover:text-primary-foreground">
-                  <ArrowUpRight className="h-4 w-4" />
-                </div>
               </div>
 
               <div className="flex flex-1 flex-col p-6">
@@ -97,6 +121,23 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
+
+                {p.links && p.links.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {p.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-border/80 bg-background px-3 py-1 text-xs text-foreground/80 transition hover:border-primary/40 hover:text-primary"
+                      >
+                        {link.label}
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.article>
           ))}
