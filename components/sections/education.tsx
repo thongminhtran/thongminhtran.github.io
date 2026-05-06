@@ -11,7 +11,7 @@ export function Education() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading eyebrow="05 — Education" title="Academic background." />
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="flex flex-col gap-4">
           {educations.map((e, i) => (
             <motion.div
               key={e.school}
