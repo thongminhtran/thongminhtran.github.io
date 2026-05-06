@@ -54,13 +54,16 @@ export function Projects() {
                 }
               >
                 {p.image && p.presentation === "logo" ? (
-                  <div className="absolute inset-0 grid place-items-center p-8">
+                  // Asymmetric padding: more on top so the logo's optical center
+                  // sits above the geometric center, balancing the top-left badge
+                  // and top-right link button.
+                  <div className="absolute inset-0 grid place-items-center pt-12 pb-6 px-8">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.image}
                       alt={p.imageAlt ?? p.title}
                       loading="lazy"
-                      className="max-h-[75%] max-w-[70%] object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-transform duration-500 group-hover:scale-[1.04]"
+                      className="max-h-full max-w-[78%] object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
                 ) : p.image ? (
