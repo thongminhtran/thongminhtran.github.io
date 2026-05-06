@@ -139,9 +139,6 @@ export function Hero() {
               className="aspect-square h-full w-full object-cover"
             />
           </div>
-          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-border/80 bg-background/90 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground backdrop-blur">
-            Calgary · YYC
-          </div>
         </motion.div>
       </div>
     </section>
