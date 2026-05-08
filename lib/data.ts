@@ -60,10 +60,12 @@ export const experiences: Experience[] = [
     companyUrl: "https://alliedsolutionsglobal.com",
     role: "Full-Stack Developer (Part-time, Remote)",
     location: "Singapore (Remote)",
-    period: "Nov 2025 — Feb 2026",
+    period: "Nov 2025 — Present",
+    current: true,
     highlights: [
       "Developed Good Catch Pro, a cross-platform safety reporting app using React Native (Expo), Redux, and a .NET 8 backend with EF Core and SQL Server — published to the App Store and Google Play.",
       "Implemented end-to-end push notifications (Expo Push API + Hangfire background jobs) and built an admin dashboard with Next.js, Material UI, and Tailwind CSS.",
+      "Migrated alliedsolutionsglobal.com to a headless architecture — Next.js 16 on Vercel + WordPress on AWS Lightsail — with zero-downtime DNS cutover via Cloudflare and bilingual EN/VI content.",
       "Built custom UI components and batch execution screens for a Manufacturing Execution System (MES) using ASP.NET Web Forms, jQuery, Bootstrap 5, and TrakSYS / ETS in a GMP environment.",
       "Managed CI/CD and deployments via Azure DevOps, EAS Build/Submit, and IIS.",
     ],
@@ -75,6 +77,9 @@ export const experiences: Experience[] = [
       "EF Core",
       "SQL Server",
       "Hangfire",
+      "WordPress",
+      "AWS Lightsail",
+      "Vercel",
       "Azure DevOps",
     ],
   },
@@ -229,11 +234,10 @@ export const projects: Project[] = [
       "Multi-environment EAS Build + Sentry + Expo OTA",
     ],
     stack: ["React Native", "Expo", "TypeScript", "Firebase", "Zustand"],
-    image: "/projects/vug-logo.png",
-    imageAlt: "VUG Social brand logo",
-    presentation: "logo",
-    panelBackground:
-      "linear-gradient(135deg, #fde7f3 0%, #ffe6d4 45%, #d8efff 100%)",
+    image: "/projects/vug-site.png",
+    imageAlt: "Vug Social download page on givevugs.com",
+    imagePosition: "top",
+    presentation: "photo",
     links: [
       {
         label: "App Store",
@@ -280,6 +284,37 @@ export const projects: Project[] = [
       },
     ],
     accent: "violet",
+  },
+  {
+    title: "alliedsolutionsglobal.com — Headless WordPress Migration",
+    description:
+      "Migrated Allied Solutions Global's corporate site to a headless architecture: Next.js 16 on Vercel + WordPress on AWS Lightsail. Zero-downtime DNS cutover with bilingual EN/VI content.",
+    highlights: [
+      "Headless WP on AWS Lightsail feeding a Next.js 16 + Tailwind v4 frontend on Vercel; zero-downtime DNS migration from GoDaddy via Cloudflare",
+      "Bilingual EN/VI: dictionary-driven copy, flag-based language switcher, and Vietnamese media fallback for partial translations",
+      "End-to-end contact form: custom WP mu-plugin + Cloudflare Turnstile bot protection + Brevo SMTP for transactional email",
+    ],
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "WordPress (headless)",
+      "AWS Lightsail",
+      "Cloudflare",
+      "Vercel",
+      "Tailwind v4",
+    ],
+    image: "/projects/alliedsolutions-site.png",
+    imageAlt: "Allied Solutions Global — About Us page (alliedsolutionsglobal.com)",
+    imagePosition: "top",
+    presentation: "photo",
+    links: [
+      {
+        label: "Live site",
+        href: "https://alliedsolutionsglobal.com",
+      },
+    ],
+    accent: "rose",
   },
   {
     title: "myMaintenance — Bombardier",
