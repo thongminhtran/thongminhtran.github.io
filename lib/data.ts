@@ -35,7 +35,7 @@ export const experiences: Experience[] = [
     companyUrl: "https://tekarraprojects.com",
     role: "Software Developer",
     location: "Calgary, AB",
-    period: "Jan 2024 — Present",
+    period: "Jul 2024 — Present",
     current: true,
     highlights: [
       "Built and shipped a cross-platform social gifting app with React Native, TypeScript, and Expo SDK — published to the App Store and Google Play.",
